@@ -1,0 +1,13 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+#root {
+  background-color: black;
+  height: 100vh;
+}
+
+.active {
+  border-bottom: 2px solid rgb(254 243 199) ;
+}
+
