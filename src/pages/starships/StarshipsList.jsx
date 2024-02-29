@@ -36,7 +36,7 @@ const StarshipsList = () => {
           next={viewMore}
           hasMore={true}
           loader={
-            pag !== 4 && pag !== 1 ? (
+            pag !== 4 ? (
               <div className="flex justify-center items-center overflow-hidden">
                 <ClipLoader speedMultiplier={0.5} color={"#F2D24E"} />
               </div>

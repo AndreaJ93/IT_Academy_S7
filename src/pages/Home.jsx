@@ -7,7 +7,7 @@ const Home = () => {
   const dispatch = useDispatch();
 
   function wantsToViewMore() {
-    dispatch(setWantsToViewMore());
+    dispatch(setWantsToViewMore(true));
   }
 
   return (

@@ -26,6 +26,12 @@ const SignUp = () => {
       if (error.code === "auth/email-already-in-use") {
         alert("This email is already in use. Please enter another email.");
       }
+      if (error.code === "auth/invalid-email") {
+        alert("This email is invalid. Please enter a correct email.");
+      }
+      if (error.code === "auth/weak-password") {
+        alert("Password should be at least 6 characters.");
+      }
     } finally {
       setLoading(false);
     }

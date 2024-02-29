@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import { useGetStarshipQuery } from "../../redux/slices/apiSlice";
 import { useState } from "react";
 import noPicture from "../../assets/no-picture.jpg";
+import Pilots from "./components/Pilots";
+import Films from "./components/Films";
 
 const StarshipInformation = () => {
   const { id } = useParams();
@@ -24,15 +26,15 @@ const StarshipInformation = () => {
 
   return (
     <div className="p-6">
-      <h3 className="text-white font-bold m-3 border-b p-2 border-[#414242]">
+      <h3 className="text-white font-bold my-3 border-b p-2 border-[#414242]">
         STARSHIP
       </h3>
       {selectedStarship && (
-        <div className="grid grid-cols-2 m-5 justify-items-end">
+        <div className="grid lg:grid-cols-2 m-5 justify-items-end">
           <img
             src={isImage}
             alt={`${selectedStarship.name} Image`}
-            className="rounded-l-lg w-full h-full object-contain"
+            className="rounded-l-lg w-full h-full object-cover"
           ></img>
           <div className="text-[#B5B7B7] bg-[#1D1E1F] p-6 rounded-r-lg border-l-2 border-amber-100">
             <h1 className="text-2xl mt-6">
@@ -64,6 +66,8 @@ const StarshipInformation = () => {
           </div>
         </div>
       )}
+      <Pilots></Pilots>
+      <Films></Films>
     </div>
   );
 };

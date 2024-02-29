@@ -18,8 +18,8 @@ export const userSlice = createSlice({
     login: (state) => {
       state.isAuthenticated = true;
     },
-    setWantsToViewMore: (state) => {
-      state.wantsToViewMore = !state.wantsToViewMore;
+    setWantsToViewMore: (state, action) => {
+      state.wantsToViewMore = action.payload;
     },
   },
 });

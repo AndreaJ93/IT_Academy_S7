@@ -22,7 +22,7 @@ const LogIn = () => {
       dispatch(login());
       if (wantsToViewMore) {
         navigate("/starshipsList");
-        dispatch(setWantsToViewMore());
+        dispatch(setWantsToViewMore(false));
       } else {
         navigate("/");
       }

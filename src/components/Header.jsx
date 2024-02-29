@@ -19,18 +19,14 @@ const Header = () => {
   return (
     <>
       <div className="grid grid-cols-3 p-8 bg-black pb-0 pt-3">
-        <section className="text-white">
+        <section className="text-white p-3">
           <FontAwesomeIcon icon={faTiktok} className="px-2 text-xl" />
           <FontAwesomeIcon icon={faInstagram} className="px-2 text-xl" />
           <FontAwesomeIcon icon={faXTwitter} className="px-2 text-xl" />
           <FontAwesomeIcon icon={faFacebook} className="px-2 text-xl" />
           <FontAwesomeIcon icon={faYoutube} className="px-2 text-xl" />
         </section>
-        <img
-          // src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpxdY9CXCFkTGk8ms-yd9kuWqRdCBOj2TXn5bsz42WdY6ImrUH1h_T_sQ9HWt-I2zTXv0&usqp=CAU"
-          src={logo}
-          className="mx-auto"
-        ></img>
+        <img src={logo} className="mx-auto"></img>
         <section className="text-end text-white">
           {isAuthenticated === false ? (
             <>
