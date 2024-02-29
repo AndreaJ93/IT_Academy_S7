@@ -1,13 +1,12 @@
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import { setUser } from "../../redux/slices/userSlice";
+import { setUser, setWantsToViewMore } from "../../redux/slices/userSlice";
 import { useNavigate } from "react-router-dom";
 import starwars from "../../assets/starwars.png";
 import { ClipLoader } from "react-spinners";
 
 const SignUp = () => {
-  const isAuthenticated = useSelector((state) => state.user.isAuthenticated);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [password, setPassword] = useState("");
@@ -39,6 +38,7 @@ const SignUp = () => {
 
   function handleClose() {
     navigate("/");
+    dispatch(setWantsToViewMore(false));
   }
 
   return (

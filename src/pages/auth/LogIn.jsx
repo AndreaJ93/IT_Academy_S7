@@ -40,6 +40,7 @@ const LogIn = () => {
 
   function handleClose() {
     navigate("/");
+    dispatch(setWantsToViewMore(false));
   }
 
   return (
