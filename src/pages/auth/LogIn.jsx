@@ -60,7 +60,7 @@ const LogIn = () => {
       <div className="grid justify-center grid-cols-4">
         <img
           src={`${starwars}`}
-          alt="Star Wars"
+          alt="StarWars"
           className="mx-auto col-span-2 col-start-2"
         ></img>
         <div className="bg-white rounded-3xl p-8 col-span-2 col-start-2">
@@ -68,20 +68,30 @@ const LogIn = () => {
             Enter your Star Wars account.
           </h1>
           <form>
-            <label className="block text-sm mt-4 text-[#1D1E1F]">Email: </label>
+            <label
+              className="block text-sm mt-4 text-[#1D1E1F]"
+              htmlFor="emailInput"
+            >
+              Email:
+            </label>
             <input
               type="email"
               name="email"
+              id="emailInput"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="bg-[#E9EBF0] rounded-md p-4 block w-full mb-4 focus:outline-none"
             ></input>
-            <label className="block text-sm mt-4 text-[#1D1E1F]">
+            <label
+              className="block text-sm mt-4 text-[#1D1E1F]"
+              htmlFor="passwordInput"
+            >
               Password:
             </label>
             <input
               type="password"
               name="password"
+              id="passwordInput"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="bg-[#E9EBF0] rounded-md p-4 block w-full mb-4 focus:outline-none"
@@ -101,6 +111,7 @@ const LogIn = () => {
             Don't have an account?{" "}
             <Link
               to="/signUp"
+              data-testid="signUpLink"
               className="text-blue-600 font-bold hover:underline"
             >
               Sing Up!

@@ -20,7 +20,10 @@ const Home = () => {
         backgroundPosition: "right",
       }}
     >
-      <h1 className="w-1/2 p-9 text-xl mx-auto text-[#B5B7B7] bg-[#1D1E1F] rounded-l-lg border-r-2 border-amber-100">
+      <h1
+        className="w-1/2 p-9 text-xl mx-auto text-[#B5B7B7] bg-[#1D1E1F] rounded-l-lg border-r-2 border-amber-100"
+        data-testid="welcomeText"
+      >
         On this site you will find a guide of all starships from the Star Wars
         saga, as well as the pilots and the movies.
       </h1>

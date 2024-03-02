@@ -26,7 +26,7 @@ const Header = () => {
           <FontAwesomeIcon icon={faFacebook} className="px-2 text-xl" />
           <FontAwesomeIcon icon={faYoutube} className="px-2 text-xl" />
         </section>
-        <img src={logo} className="mx-auto"></img>
+        <img src={logo} className="mx-auto" alt="StarWars"></img>
         <section className="text-end text-white">
           {isAuthenticated === false ? (
             <>

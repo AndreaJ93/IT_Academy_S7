@@ -34,10 +34,11 @@ const StarshipInformation = () => {
           <img
             src={isImage}
             alt={`${selectedStarship.name} Image`}
+            data-testid="starshipImage"
             className="rounded-l-lg w-full h-full object-cover"
           ></img>
           <div className="text-[#B5B7B7] bg-[#1D1E1F] p-6 rounded-r-lg border-l-2 border-amber-100">
-            <h1 className="text-2xl mt-6">
+            <h1 className="text-2xl mt-6" data-testid="starshipName">
               {selectedStarship.name.toUpperCase()}
             </h1>
             <p className="my-5">
